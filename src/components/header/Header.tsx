@@ -35,7 +35,7 @@ function Header() {
          {slideImages.map((slideImage, index)=> (
             <div className='' key={index}>
               <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-                <span className='font-bold text-black text-3xl' >{slideImage.caption}</span>
+                <span className='font-bold md:text-black text-center text-white flex items-center md:text-4xl text-3xl md:ml-3 md:mr-3 ml-5 ' >{slideImage.caption}</span>
                 <div></div>
                 
               </div>
