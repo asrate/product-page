@@ -46,7 +46,7 @@ const ProductList = () => {
                   className="w-full h-40 object-contain mb-4 cursor-pointer"
                  
                 />
-                </Link>
+                
                 <h2 className="text-lg font-semibold text-gray-800 truncate">
                   {product.title}
                 </h2>
@@ -54,7 +54,7 @@ const ProductList = () => {
                   ${product.price}
                 </p>
                 <p className="text-sm text-gray-500 mt-1">Category: {product.category}</p>
-                
+                </Link>
                 
                 <button
                 
