@@ -1,4 +1,4 @@
-// filterSlice.js (Redux slice for managing filters)
+
 
 import { createSlice } from '@reduxjs/toolkit';
 

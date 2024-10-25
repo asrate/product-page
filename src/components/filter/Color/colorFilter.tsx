@@ -7,13 +7,13 @@ const ColorSelector: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const selectedColor = useSelector((state: RootState) => state.filter.color);
 
-  // Define colors with their Tailwind CSS classes
+  
   const colors = [
     { name: 'Red', class: 'bg-red-500' },
     { name: 'Blue', class: 'bg-blue-500' },
     { name: 'Green', class: 'bg-green-500' },
     { name: 'Black', class: 'bg-black' },
-    { name: 'White', class: 'bg-white border border-gray-300' }, // White needs a border to be visible
+    { name: 'White', class: 'bg-white border border-gray-300' }, 
   ];
 
   const handleSelect = (color: string) => {
@@ -29,7 +29,7 @@ const ColorSelector: React.FC = () => {
             selectedColor === color.name ? 'ring-2 ring-blue-500' : ''
           }`}
           onClick={() => handleSelect(color.name)}
-          title={color.name} // Tooltip to show color name on hover
+          title={color.name} 
         />
       ))}
     </div>

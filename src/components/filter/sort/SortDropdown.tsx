@@ -8,7 +8,7 @@ const SortDropdown: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const sortOption = useSelector((state: RootState) => state.filter.sortOption);
 
-  // Function to handle option selection
+  
   const handleSelect = (value: string) => {
     dispatch(setSortOption(value));
   };

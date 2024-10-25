@@ -7,10 +7,10 @@ import { setPriceRange } from '../../../store/features/filters/filterSlice';
 const PriceRangeSlider: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   
-  // Get the current price range from Redux state
+  
   const priceRange = useSelector((state: RootState) => state.filter.priceRange);
 
-  // Function to handle the slider value change
+  
   const handleValueChange = (values: number[]) => {
     dispatch(setPriceRange(values));
   };
@@ -25,8 +25,8 @@ const PriceRangeSlider: React.FC = () => {
         min={0}
         max={1000}
         step={10}
-        value={priceRange}  // Current price range state
-        onValueChange={handleValueChange}  // Dispatch the updated value to the store
+        value={priceRange}  
+        onValueChange={handleValueChange}  
       >
         <Slider.Track className="bg-gray-200 relative grow h-2 rounded-full">
           <Slider.Range className="absolute bg-blue-500 h-full rounded-full" />

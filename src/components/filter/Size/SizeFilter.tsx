@@ -8,7 +8,7 @@ const SizeSelector: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const selectedSize = useSelector((state: RootState) => state.filter.size);
 
-  // Define available sizes
+ 
   const sizes = ['S', 'M', 'L', 'XL'];
 
   const handleSelect = (size: string) => {

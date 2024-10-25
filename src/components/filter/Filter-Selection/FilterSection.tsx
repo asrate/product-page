@@ -2,8 +2,7 @@ import React from 'react';
 import SortDropdown from '../sort/SortDropdown';
 import PriceRangeSlider from '../price-range/PriceRangeSlider';
 import Category from '../catagories/Catagories';
-import ColorSelector from '../Color/colorFilter';
-import SizeSelector from '../Size/SizeFilter';
+
 import BrandDropdown from '../brand-filter/BrandFilter';
 
 const FilterSection: React.FC = () => {

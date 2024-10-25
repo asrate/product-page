@@ -1,6 +1,6 @@
-import { StrictMode } from 'react'
+
 import { createRoot } from 'react-dom/client'
-import { Theme,ThemePanel } from "@radix-ui/themes";
+import { Theme } from "@radix-ui/themes";
 import './index.css';
 import App from './App.tsx'
 import { Provider } from 'react-redux';

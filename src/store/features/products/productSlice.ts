@@ -1,4 +1,4 @@
-// src/store/features/products/productSlice.ts
+
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -13,19 +13,19 @@ interface Product {
 
 interface ProductState {
   products: Product[];
-  product: Product | null; // For storing a single product, can be null
+  product: Product | null; 
   loading: boolean;
   error: string | null;
 }
 
 const initialState: ProductState = {
   products: [],
-  product: null, // Initialize to null
+  product: null, 
   loading: false,
   error: null,
 };
 
-// Thunk to fetch all products
+
 export const fetchProducts = createAsyncThunk<Product[], void>(
   "products/fetchProducts",
   async () => {
@@ -34,7 +34,7 @@ export const fetchProducts = createAsyncThunk<Product[], void>(
   }
 );
 
-// Thunk to fetch a single product by ID
+
 export const fetchProductById = createAsyncThunk<Product, string>(
   "products/fetchProductById",
   async (id) => {
@@ -43,7 +43,7 @@ export const fetchProductById = createAsyncThunk<Product, string>(
   }
 );
 
-// Product slice
+
 const productSlice = createSlice({
   name: "product",
   initialState,
@@ -52,7 +52,7 @@ const productSlice = createSlice({
     builder
       .addCase(fetchProducts.pending, (state) => {
         state.loading = true;
-        state.error = null; // Reset error on new fetch
+        state.error = null; 
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.loading = false;
@@ -62,10 +62,10 @@ const productSlice = createSlice({
         state.loading = false;
         state.error = action.error.message || "Failed to fetch products";
       })
-      // Handling single product fetch
+     
       .addCase(fetchProductById.pending, (state) => {
         state.loading = true;
-        state.error = null; // Reset error on new fetch
+        state.error = null; 
       })
       .addCase(fetchProductById.fulfilled, (state, action) => {
         state.loading = false;

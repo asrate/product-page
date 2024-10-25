@@ -2,15 +2,15 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../store/store";
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { setBrand } from '../../../store/features/filters/filterSlice'; // Update with your actual action
+import { setBrand } from '../../../store/features/filters/filterSlice'; 
 
 const BrandDropdown: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const brandOption = useSelector((state: RootState) => state.filter.brand); // Adjust state based on your setup
+  const brandOption = useSelector((state: RootState) => state.filter.brand); 
 
-  // Function to handle option selection
+  
   const handleSelect = (value: string) => {
-    dispatch(setBrand(value)); // Update with your actual action for setting brand
+    dispatch(setBrand(value)); 
   };
 
   return (
@@ -27,7 +27,7 @@ const BrandDropdown: React.FC = () => {
         </DropdownMenu.Item>
         <DropdownMenu.Item
           className="p-2 hover:bg-gray-100 cursor-pointer"
-          onSelect={() => handleSelect(' Samsung')} // Replace with actual brand names
+          onSelect={() => handleSelect(' Samsung')} 
         >
          Samsung
         </DropdownMenu.Item>
@@ -43,7 +43,7 @@ const BrandDropdown: React.FC = () => {
         >
          LG
         </DropdownMenu.Item>
-        {/* Add more brands as needed */}
+      
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );

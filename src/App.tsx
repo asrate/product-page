@@ -1,4 +1,4 @@
-import { Flex, Text, Button } from "@radix-ui/themes";
+import { Flex} from "@radix-ui/themes";
 import ProductList from "./components/Products/ProductsList";
 import Header from "./components/header/Header";
 import { Route, Routes } from "react-router-dom";
